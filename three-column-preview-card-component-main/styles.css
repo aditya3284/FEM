@@ -23,6 +23,7 @@ body {
     display: grid;
     place-items: center;
     background-color: var(--color);
+    position: relative;
 }
 
 img {
@@ -61,7 +62,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
     border-radius: 12px;
     overflow: hidden;
-    margin-inline: 24px;
+    margin-inline: 10px;
 }
 
 .cards {
@@ -100,7 +101,7 @@ img {
     font-size: 15px;
     padding: 14px 34px;
     border-radius: 24px;
-    margin-block-start: 80px;
+    margin-block-start: 80px
 }
 
 .sedan .cta-btn {
@@ -115,7 +116,8 @@ img {
     color: var(--luxury-clr);
 }
 
-.cta-btn:hover {
+.cta-btn:hover,
+.cta-btn:active {
     cursor: pointer;
     color: var(--color);
     border: 2px solid var(--color);
@@ -123,7 +125,7 @@ img {
 }
 
 .attribution {
-    position: fixed;
+    position: absolute;
     bottom: 5px;
     font-size: 11px;
     text-align: center;
@@ -131,4 +133,23 @@ img {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width : 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        max-height: 1326px;
+        margin-inline: clamp(24px, 5vw + 5px, 64px);
+        margin-block: 88px;
+    }
+
+    .cardHeading {
+        font-size: 32px;
+    }
+
+    .cta-btn {
+        padding: 12px 34px;
+        margin-block-start: 32px;
+    }
 }
