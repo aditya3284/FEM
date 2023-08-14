@@ -125,8 +125,7 @@ img {
 }
 
 .attribution {
-    position: absolute;
-    bottom: 5px;
+    display: none;
     font-size: 11px;
     text-align: center;
 }
